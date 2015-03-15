@@ -35,7 +35,7 @@ You also can now create `CGRect` value by:
 You can now create `CGPoint` value with
 - Definite proportion and seperated points
 
-##Integral And Align To Screen Pixel
+##Integral And Align to Screen Pixel
 You can now integral CGFloat, CGPoint, CGSize and CGRect value by accessing their  `integral` property.
 
 You can now algin CGFloat, CGPoint, CGSize and CGRect value to screen pixel by calling `func alignToScreenPixel(policy: ScreenPixelAlignmentPolicy)` function on those value.
