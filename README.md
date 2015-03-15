@@ -55,4 +55,4 @@ You can `*`, `/` a CGSize value with a CGFloat or an Int value now
 - Enumerate each vertex on a `CGRect` value
 
 # License
-Swift Extended Library is available under the MIT license. See the LICENSE file for more info.
+Core Graphics Extended Library is available under the MIT license. See the LICENSE file for more info.
