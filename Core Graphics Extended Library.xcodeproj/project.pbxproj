@@ -21,6 +21,7 @@
 		63C9295719F21F7800139136 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9295619F21F7800139136 /* CGSize.swift */; };
 		63C9295819F21F7C00139136 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9295619F21F7800139136 /* CGSize.swift */; };
 		63F4CF7C1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */; };
+		63F4CF7E1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		63C9293719F2138900139136 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		63C9295619F21F7800139136 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+UIKitAddition.swift"; sourceTree = "<group>"; };
+		63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+AppKitAddition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				63C9291219F1FE7600139136 /* Supporting Files */,
+				63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */,
 			);
 			path = "Core Graphics Extended Library for OS X";
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				63C9293319F202ED00139136 /* CGFloat.swift in Sources */,
 				63C9293619F2035D00139136 /* CGPoint.swift in Sources */,
 				63C9293919F2138900139136 /* CGRect.swift in Sources */,
+				63F4CF7E1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
