@@ -1,4 +1,4 @@
-Core Graphics Extended Library is aiming to completes missing conveniences in Core Graphics.
+Core Graphics Extended Library is aiming to complete missing conveniences in Core Graphics.
 
 # Get Started
 - Download Core Graphics Extended Library
