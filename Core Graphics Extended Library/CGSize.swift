@@ -9,28 +9,36 @@
 import CoreGraphics
 
 extension CGSize {
+    /// Create a zero size
     public static var zero: CGSize {
         return CGSizeZero
     }
     
+    /// Create a CGSize value with maximum width and height
     public static var max: CGSize {
         return CGSize(width: CGFloat.max, height: CGFloat.max)
     }
 }
 
 extension CGSize {
+    /// Get minimum side length
     public var minSideLength: CGFloat {
         return Swift.min(width, height)
     }
+    
+    /// Get maximum side length
     public var maxSideLength: CGFloat {
         return Swift.max(width, height)
     }
+    
+    /// Integral
     public var integeral: CGSize {
         return CGSize(width: ceil(width), height: ceil(height))
     }
 }
 
 extension CGSize {
+    /// Linear mix the size with the given size and percentage
     public func mix(size: CGSize, percentage: CGFloat) -> CGSize {
         let size = CGSize(width: (self.width * (1 - percentage) + size.width * percentage),
             height: (self.height * (1 - percentage) + size.height * percentage))

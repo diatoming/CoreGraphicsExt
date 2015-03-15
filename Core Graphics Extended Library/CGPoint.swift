@@ -9,12 +9,14 @@
 import CoreGraphics
 
 extension CGPoint {
+    /// Return a zero point
     public static var zero: CGPoint {
         return CGPoint.zeroPoint
     }
 }
 
 extension CGPoint {
+    /// Return an offset point with given offset
     public func offset(offset: CGPoint) -> CGPoint {
         var offsetPoint = self
         offsetPoint.x += offset.x
@@ -22,6 +24,7 @@ extension CGPoint {
         return offsetPoint
     }
     
+    /// Calculate distance from current point to given point
     public func distanceTo(point : CGPoint) -> CGFloat {
         let x1 = x, x2 = point.x
         let y1 = y, y2 = point.y
@@ -31,18 +34,25 @@ extension CGPoint {
         return delta
     }
     
+    /// Check if the point is inside the biggest circle which is inside the given rectangle
     public func insideCircleOfRect(rect: CGRect) -> Bool {
-        return pow(x - rect.origin.x, 2) + pow(y - rect.origin.y, 2) < pow(rect.size.width, 2)
+        let minimumSideLength = min(rect.size.width, rect.size.height)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) < pow(minimumSideLength, 2)
     }
     
+    /// Check if the point is on the circumference of the biggest circle which is inside the given rectangle
     public func onCircleOfRect(rect: CGRect) -> Bool {
-        return pow(x - rect.origin.x, 2) + pow(y - rect.origin.y, 2) == pow(rect.size.width, 2)
+        let minimumSideLength = min(rect.size.width, rect.size.height)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) == pow(minimumSideLength, 2)
     }
     
+    /// Check if the point is on the circumference or inside the biggest circle which is inside the given rectangle
     public func containedByCircleOfRect(rect: CGRect) -> Bool {
-        return pow(x - rect.origin.x, 2) + pow(y - rect.origin.y, 2) <= pow(rect.size.width, 2)
+        let minimumSideLength = min(rect.size.width, rect.size.height)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) <= pow(minimumSideLength, 2)
     }
     
+    /// Check if the point is inside the given rectangle
     public func insideRect(rect: CGRect) -> Bool {
         let pointX = x, pointY = y
         let leftBounds = rect.origin.x
@@ -57,6 +67,7 @@ extension CGPoint {
         return false
     }
     
+    /// Check if the point is on the circumference of the given rectangle
     public func onRect(rect: CGRect) -> Bool {
         let pointX = x, pointY = y
         let leftBounds = rect.origin.x
@@ -71,6 +82,7 @@ extension CGPoint {
         return false
     }
     
+    /// Check if the point is on the circumference or inside the given rectangle
     public func containedByRect(rect: CGRect) -> Bool {
         let pointX = x, pointY = y
         let leftBounds = rect.origin.x
@@ -85,6 +97,7 @@ extension CGPoint {
         return false
     }
     
+    /// Calculate the mid point between the point and the given point
     public func midPointTo(point: CGPoint) -> CGPoint {
         let x1 = self.x, x2 = point.x
         let y1 = self.y, y2 = point.y
@@ -94,6 +107,7 @@ extension CGPoint {
         return CGPoint(x: midX, y: midY)
     }
     
+    /// Create a point with a given porpotion which separates the origin the destination point
     init(origin: CGPoint, destination: CGPoint, proportion: CGFloat) {
         let originX = origin.x, originY = origin.y
         let destinationX = destination.x, destinationY = destination.y
@@ -102,10 +116,12 @@ extension CGPoint {
         y = (originY + proportion * destinationY) / (1 + proportion)
     }
     
+    /// Calculate the proportion for point which locates between the origin and the destination
     public static func proportionForPoint(interpolatePoint: CGPoint, betweenPoints origin: CGPoint, destination: CGPoint) -> CGFloat {
         return (origin.y - interpolatePoint.y) / (interpolatePoint.y - destination.y)
     }
     
+    /// Linear mixing a point with the given point and percentage
     public func mix(point: CGPoint, percentage: CGFloat) -> CGPoint {
         let mixedPoint = CGPointMake((self.x * (1 - percentage) + point.x * percentage),
             (self.y * (1 - percentage) + point.y * percentage))
@@ -114,9 +130,12 @@ extension CGPoint {
 }
 
 extension CGPoint {
+    /// Return a point with given x and original y
     public func pointWithX(x anX: CGFloat) -> CGPoint {
         return CGPoint(x: anX, y: y)
     }
+    
+    /// Return a point with original x and given y
     public func pointWithY(y aY: CGFloat) -> CGPoint {
         return CGPoint(x: x, y: aY)
     }
