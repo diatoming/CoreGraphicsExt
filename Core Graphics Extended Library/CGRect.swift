@@ -237,8 +237,8 @@ extension CGRect {
     }
     
     /// Integral
-    public var integeral: CGSize {
-        return CGSize(width: ceil(width), height: ceil(height))
+    public var integeral: CGRect {
+        return CGRect(x: ceil(origin.x), y:ceil(origin.y), width: ceil(width), height: ceil(height))
     }
 }
 
