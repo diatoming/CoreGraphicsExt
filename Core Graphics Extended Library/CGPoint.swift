@@ -118,7 +118,11 @@ extension CGPoint {
     
     /// Calculate the proportion for point which locates between the origin and the destination
     public static func proportionForPoint(interpolatePoint: CGPoint, betweenPoints origin: CGPoint, destination: CGPoint) -> CGFloat {
-        return (origin.y - interpolatePoint.y) / (interpolatePoint.y - destination.y)
+        let evaluateY = (origin.y - interpolatePoint.y) / (interpolatePoint.y - destination.y)
+        if evaluateY.isNaN {
+            return (origin.x - interpolatePoint.x) / (interpolatePoint.x - destination.x)
+        }
+        return evaluateY
     }
     
     /// Linear mixing a point with the given point and percentage
