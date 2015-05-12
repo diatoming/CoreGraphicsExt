@@ -52,27 +52,27 @@ extension CGRect {
     }
 }
 
-extension CGRect {
-    private class CGRectGenerator : GeneratorType {
-        let rect: CGRect
-        var rawValue = 0
-        typealias Element = CGPoint
-        
-        init(_ aRect: CGRect) {
-            rect = aRect
-        }
-        
-        func next() -> Element? {
-            if let vertex = CGRectVertex(rawValue: rawValue) {
-                let element = rect.vertex(vertex)
-                rawValue += 1
-                return element
-            } else {
-                return nil
-            }
-        }
+private class CGRectGenerator : GeneratorType {
+    let rect: CGRect
+    var rawValue = 0
+    typealias Element = CGPoint
+    
+    init(_ aRect: CGRect) {
+        rect = aRect
     }
     
+    func next() -> Element? {
+        if let vertex = CGRectVertex(rawValue: rawValue) {
+            let element = rect.vertex(vertex)
+            rawValue += 1
+            return element
+        } else {
+            return nil
+        }
+    }
+}
+
+extension CGRect {
     /// Get the specific vertex on the rectangle
     public func vertex(vertex: CGRectVertex) -> CGPoint {
         switch vertex {
@@ -239,6 +239,15 @@ extension CGRect {
     /// Integral
     public var integeral: CGRect {
         return CGRect(x: ceil(origin.x), y:ceil(origin.y), width: ceil(width), height: ceil(height))
+    }
+    
+    /// Mix with an other CGRect
+    /// Linear mix the CGFloat value with the given value and percentage
+    public func mix(mixedValue: CGRect, percentage: CGFloat) -> CGRect {
+        return CGRect(x: (self.origin.x * (1 - percentage) + mixedValue.origin.x * percentage),
+            y: (self.origin.y * (1 - percentage) + mixedValue.origin.y * percentage),
+            width: (self.size.width * (1 - percentage) + mixedValue.size.width * percentage),
+            height: (self.size.height * (1 - percentage) + mixedValue.size.height * percentage))
     }
 }
 
