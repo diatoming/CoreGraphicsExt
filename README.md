@@ -1,6 +1,10 @@
 Core Graphics Extended Library is aiming to complete missing conveniences in Core Graphics.
 
 # Get Started
+##Cocoa Pods
+`pod "CoreGraphicsExt"`
+
+##Manually Install
 - Download Core Graphics Extended Library
 - Drag Core Graphics Extended Library’s Xcode project file to your workspace
 - Add Core Graphics Extended Library to your`Emebed Binaries`  field in your target’s general page if you are building an app. Or add Core Graphics Extended Library to your `Linked Frameworks and Libraries` field in your target’s general page if you are building a framework.
