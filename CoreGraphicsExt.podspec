@@ -14,11 +14,13 @@ Pod::Spec.new do |s|
 
   s.author       = { "WeZZard" => "wezzardlau@gmail.com" }
   
-  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.9"
 
   s.source       = { :git => "https://github.com/WeZZard/Core-Graphics-Extended-Library.git", :tag => "0.0.1" }
 
-  s.source_files  = "Core\ Graphics\ Extended\ Library", "Core\ Graphics\ Extended\ Library\ for\ iOS", "Core\ Graphics\ Extended\ Library\ for\ OS\ X"
+  s.ios.source_files  = "Core\ Graphics\ Extended\ Library", "Core\ Graphics\ Extended\ Library\ for\ iOS"
+  s.osx.source_files  = "Core\ Graphics\ Extended\ Library", "Core\ Graphics\ Extended\ Library\ for\ OS\ X"
 
   s.requires_arc = true
 
