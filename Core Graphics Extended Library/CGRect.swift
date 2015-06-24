@@ -9,7 +9,7 @@
 import CoreGraphics
 
 /// Vertices on CGRect
-public enum CGRectVertex: Int, DebugPrintable, Printable {
+public enum CGRectVertex: Int, CustomDebugStringConvertible, CustomStringConvertible {
     case TopRight    = 0
     case BottomRight = 1
     case BottomLeft  = 2
@@ -21,7 +21,6 @@ public enum CGRectVertex: Int, DebugPrintable, Printable {
         case .BottomRight:  return "Bottom Right"
         case .BottomLeft:   return "Bottom Left"
         case .TopLeft:      return "Top Left"
-        default:            return String(rawValue)
         }
     }
     
@@ -39,8 +38,8 @@ public enum CGRectVertex: Int, DebugPrintable, Printable {
         }
     }
     
-    public static func enumerate() -> SequenceOf<CGRectVertex> {
-        return SequenceOf<CGRectVertex>({ CGRectVertexGenerator() })
+    public static func enumerate() -> AnySequence<CGRectVertex> {
+        return AnySequence({ CGRectVertexGenerator() })
     }
 }
 
@@ -92,8 +91,8 @@ extension CGRect {
         return (self.vertex(.TopRight), self.vertex(.BottomRight), self.vertex(.BottomLeft), self.vertex(.TopLeft))
     }
     
-    public func enumerate() -> SequenceOf<CGPoint> {
-        return SequenceOf<CGPoint>({CGRectGenerator(self)})
+    public func enumerate() -> AnySequence<CGPoint> {
+        return AnySequence({CGRectGenerator(self)})
     }
 }
 
