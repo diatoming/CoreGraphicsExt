@@ -11,7 +11,6 @@
 		63C928E319F1FE4F00139136 /* Core_Graphics_Extended_Library_for_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C928E219F1FE4F00139136 /* Core_Graphics_Extended_Library_for_iOSTests.swift */; };
 		63C9291B19F1FE7600139136 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */; };
 		63C9292219F1FE7700139136 /* Core_Graphics_Extended_Library_for_OS_XTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9292119F1FE7700139136 /* Core_Graphics_Extended_Library_for_OS_XTests.swift */; };
-		63C9292D19F200BB00139136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C9292C19F200BB00139136 /* CoreGraphics.framework */; };
 		63C9293219F202ED00139136 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293119F202ED00139136 /* CGFloat.swift */; };
 		63C9293319F202ED00139136 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293119F202ED00139136 /* CGFloat.swift */; };
 		63C9293519F2035D00139136 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293419F2035D00139136 /* CGPoint.swift */; };
@@ -30,30 +29,29 @@
 			containerPortal = 63C928C519F1FE3D00139136 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63C928CF19F1FE4E00139136;
-			remoteInfo = "Core Graphics Extended Library for iOS";
+			remoteInfo = "Core-Graphics-Extended-Library-for-iOS";
 		};
 		63C9291C19F1FE7600139136 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63C928C519F1FE3D00139136 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63C9290F19F1FE7600139136;
-			remoteInfo = "Core Graphics Extended Library for OS X";
+			remoteInfo = "Core-Graphics-Extended-Library-for-OS-X";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C928D419F1FE4F00139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C928DB19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Graphics Extended Library for iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C928DB19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core-Graphics-Extended-Library-for-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C928E119F1FE4F00139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C928E219F1FE4F00139136 /* Core_Graphics_Extended_Library_for_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_Graphics_Extended_Library_for_iOSTests.swift; sourceTree = "<group>"; };
 		63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C9291319F1FE7600139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C9291A19F1FE7600139136 /* Core Graphics Extended Library for OS XTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Graphics Extended Library for OS XTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C9291A19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core-Graphics-Extended-Library-for-OS-XTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C9292019F1FE7600139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C9292119F1FE7700139136 /* Core_Graphics_Extended_Library_for_OS_XTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_Graphics_Extended_Library_for_OS_XTests.swift; sourceTree = "<group>"; };
 		63C9292A19F200B400139136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		63C9292C19F200BB00139136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		63C9293119F202ED00139136 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		63C9293419F2035D00139136 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		63C9293719F2138900139136 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C9292D19F200BB00139136 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,11 +97,11 @@
 		63C928C419F1FE3D00139136 = {
 			isa = PBXGroup;
 			children = (
-				63C9292919F2001800139136 /* Core Graphics Extended Library */,
-				63C928D219F1FE4E00139136 /* Core Graphics Extended Library for iOS */,
-				63C928DF19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests */,
-				63C9291119F1FE7600139136 /* Core Graphics Extended Library for OS X */,
-				63C9291E19F1FE7600139136 /* Core Graphics Extended Library for OS XTests */,
+				63C9292919F2001800139136 /* Core-Graphics-Extended-Library */,
+				63C928D219F1FE4E00139136 /* Core-Graphics-Extended-Library-for-iOS */,
+				63C928DF19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests */,
+				63C9291119F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-X */,
+				63C9291E19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests */,
 				63C928D119F1FE4E00139136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,38 +110,37 @@
 			isa = PBXGroup;
 			children = (
 				63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */,
-				63C928DB19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests.xctest */,
+				63C928DB19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests.xctest */,
 				63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */,
-				63C9291A19F1FE7600139136 /* Core Graphics Extended Library for OS XTests.xctest */,
+				63C9291A19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63C928D219F1FE4E00139136 /* Core Graphics Extended Library for iOS */ = {
+		63C928D219F1FE4E00139136 /* Core-Graphics-Extended-Library-for-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				63C928D319F1FE4F00139136 /* Supporting Files */,
 				63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */,
+				63C928D319F1FE4F00139136 /* Supporting Files */,
 			);
-			path = "Core Graphics Extended Library for iOS";
+			path = "Core-Graphics-Extended-Library-for-iOS";
 			sourceTree = "<group>";
 		};
 		63C928D319F1FE4F00139136 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				63C9292C19F200BB00139136 /* CoreGraphics.framework */,
 				63C928D419F1FE4F00139136 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		63C928DF19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests */ = {
+		63C928DF19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
 				63C928E219F1FE4F00139136 /* Core_Graphics_Extended_Library_for_iOSTests.swift */,
 				63C928E019F1FE4F00139136 /* Supporting Files */,
 			);
-			path = "Core Graphics Extended Library for iOSTests";
+			path = "Core-Graphics-Extended-Library-for-iOSTests";
 			sourceTree = "<group>";
 		};
 		63C928E019F1FE4F00139136 /* Supporting Files */ = {
@@ -155,13 +151,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		63C9291119F1FE7600139136 /* Core Graphics Extended Library for OS X */ = {
+		63C9291119F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-X */ = {
 			isa = PBXGroup;
 			children = (
-				63C9291219F1FE7600139136 /* Supporting Files */,
 				63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */,
+				63C9291219F1FE7600139136 /* Supporting Files */,
 			);
-			path = "Core Graphics Extended Library for OS X";
+			path = "Core-Graphics-Extended-Library-for-OS-X";
 			sourceTree = "<group>";
 		};
 		63C9291219F1FE7600139136 /* Supporting Files */ = {
@@ -173,13 +169,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		63C9291E19F1FE7600139136 /* Core Graphics Extended Library for OS XTests */ = {
+		63C9291E19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests */ = {
 			isa = PBXGroup;
 			children = (
 				63C9292119F1FE7700139136 /* Core_Graphics_Extended_Library_for_OS_XTests.swift */,
 				63C9291F19F1FE7600139136 /* Supporting Files */,
 			);
-			path = "Core Graphics Extended Library for OS XTests";
+			path = "Core-Graphics-Extended-Library-for-OS-XTests";
 			sourceTree = "<group>";
 		};
 		63C9291F19F1FE7600139136 /* Supporting Files */ = {
@@ -190,7 +186,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		63C9292919F2001800139136 /* Core Graphics Extended Library */ = {
+		63C9292919F2001800139136 /* Core-Graphics-Extended-Library */ = {
 			isa = PBXGroup;
 			children = (
 				63C9293119F202ED00139136 /* CGFloat.swift */,
@@ -198,7 +194,7 @@
 				63C9293719F2138900139136 /* CGRect.swift */,
 				63C9295619F21F7800139136 /* CGSize.swift */,
 			);
-			path = "Core Graphics Extended Library";
+			path = "Core-Graphics-Extended-Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +217,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63C928CF19F1FE4E00139136 /* Core Graphics Extended Library for iOS */ = {
+		63C928CF19F1FE4E00139136 /* Core-Graphics-Extended-Library-for-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C928E419F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for iOS" */;
+			buildConfigurationList = 63C928E419F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-iOS" */;
 			buildPhases = (
 				63C928CB19F1FE4E00139136 /* Sources */,
 				63C928CC19F1FE4E00139136 /* Frameworks */,
@@ -234,14 +230,14 @@
 			);
 			dependencies = (
 			);
-			name = "Core Graphics Extended Library for iOS";
-			productName = "Core Graphics Extended Library for iOS";
+			name = "Core-Graphics-Extended-Library-for-iOS";
+			productName = "Core-Graphics-Extended-Library-for-iOS";
 			productReference = 63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		63C928DA19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests */ = {
+		63C928DA19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C928E719F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for iOSTests" */;
+			buildConfigurationList = 63C928E719F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-iOSTests" */;
 			buildPhases = (
 				63C928D719F1FE4F00139136 /* Sources */,
 				63C928D819F1FE4F00139136 /* Frameworks */,
@@ -252,14 +248,14 @@
 			dependencies = (
 				63C928DE19F1FE4F00139136 /* PBXTargetDependency */,
 			);
-			name = "Core Graphics Extended Library for iOSTests";
-			productName = "Core Graphics Extended Library for iOSTests";
-			productReference = 63C928DB19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests.xctest */;
+			name = "Core-Graphics-Extended-Library-for-iOSTests";
+			productName = "Core-Graphics-Extended-Library-for-iOSTests";
+			productReference = 63C928DB19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		63C9290F19F1FE7600139136 /* Core Graphics Extended Library for OS X */ = {
+		63C9290F19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C9292319F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for OS X" */;
+			buildConfigurationList = 63C9292319F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-OS-X" */;
 			buildPhases = (
 				63C9290B19F1FE7600139136 /* Sources */,
 				63C9290C19F1FE7600139136 /* Frameworks */,
@@ -270,14 +266,14 @@
 			);
 			dependencies = (
 			);
-			name = "Core Graphics Extended Library for OS X";
-			productName = "Core Graphics Extended Library for OS X";
+			name = "Core-Graphics-Extended-Library-for-OS-X";
+			productName = "Core-Graphics-Extended-Library-for-OS-X";
 			productReference = 63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		63C9291919F1FE7600139136 /* Core Graphics Extended Library for OS XTests */ = {
+		63C9291919F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C9292619F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for OS XTests" */;
+			buildConfigurationList = 63C9292619F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-OS-XTests" */;
 			buildPhases = (
 				63C9291619F1FE7600139136 /* Sources */,
 				63C9291719F1FE7600139136 /* Frameworks */,
@@ -288,9 +284,9 @@
 			dependencies = (
 				63C9291D19F1FE7600139136 /* PBXTargetDependency */,
 			);
-			name = "Core Graphics Extended Library for OS XTests";
-			productName = "Core Graphics Extended Library for OS XTests";
-			productReference = 63C9291A19F1FE7600139136 /* Core Graphics Extended Library for OS XTests.xctest */;
+			name = "Core-Graphics-Extended-Library-for-OS-XTests";
+			productName = "Core-Graphics-Extended-Library-for-OS-XTests";
+			productReference = 63C9291A19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -317,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63C928C819F1FE3D00139136 /* Build configuration list for PBXProject "Core Graphics Extended Library" */;
+			buildConfigurationList = 63C928C819F1FE3D00139136 /* Build configuration list for PBXProject "Core-Graphics-Extended-Library" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -330,10 +326,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63C928CF19F1FE4E00139136 /* Core Graphics Extended Library for iOS */,
-				63C928DA19F1FE4F00139136 /* Core Graphics Extended Library for iOSTests */,
-				63C9290F19F1FE7600139136 /* Core Graphics Extended Library for OS X */,
-				63C9291919F1FE7600139136 /* Core Graphics Extended Library for OS XTests */,
+				63C928CF19F1FE4E00139136 /* Core-Graphics-Extended-Library-for-iOS */,
+				63C928DA19F1FE4F00139136 /* Core-Graphics-Extended-Library-for-iOSTests */,
+				63C9290F19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-X */,
+				63C9291919F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-XTests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,12 +411,12 @@
 /* Begin PBXTargetDependency section */
 		63C928DE19F1FE4F00139136 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 63C928CF19F1FE4E00139136 /* Core Graphics Extended Library for iOS */;
+			target = 63C928CF19F1FE4E00139136 /* Core-Graphics-Extended-Library-for-iOS */;
 			targetProxy = 63C928DD19F1FE4F00139136 /* PBXContainerItemProxy */;
 		};
 		63C9291D19F1FE7600139136 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 63C9290F19F1FE7600139136 /* Core Graphics Extended Library for OS X */;
+			target = 63C9290F19F1FE7600139136 /* Core-Graphics-Extended-Library-for-OS-X */;
 			targetProxy = 63C9291C19F1FE7600139136 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -480,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for iOS/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -531,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for iOS/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -585,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for iOSTests/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -628,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for iOSTests/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -679,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for OS X/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-OS-X/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -730,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for OS X/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-OS-X/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -782,7 +778,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for OS XTests/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-OS-XTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -826,7 +822,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Core Graphics Extended Library for OS XTests/Info.plist";
+				INFOPLIST_FILE = "Core-Graphics-Extended-Library-for-OS-XTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -839,7 +835,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63C928C819F1FE3D00139136 /* Build configuration list for PBXProject "Core Graphics Extended Library" */ = {
+		63C928C819F1FE3D00139136 /* Build configuration list for PBXProject "Core-Graphics-Extended-Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C928C919F1FE3D00139136 /* Debug */,
@@ -848,7 +844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C928E419F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for iOS" */ = {
+		63C928E419F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C928E519F1FE4F00139136 /* Debug */,
@@ -857,7 +853,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C928E719F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for iOSTests" */ = {
+		63C928E719F1FE4F00139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C928E819F1FE4F00139136 /* Debug */,
@@ -866,7 +862,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C9292319F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for OS X" */ = {
+		63C9292319F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-OS-X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C9292419F1FE7700139136 /* Debug */,
@@ -875,7 +871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C9292619F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core Graphics Extended Library for OS XTests" */ = {
+		63C9292619F1FE7700139136 /* Build configuration list for PBXNativeTarget "Core-Graphics-Extended-Library-for-OS-XTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C9292719F1FE7700139136 /* Debug */,
