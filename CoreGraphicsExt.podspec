@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	
   s.name         = "CoreGraphicsExt"
-  s.version      = "0.0.1"
+  s.version      = "2.0.0"
   s.summary      = "A library extends CoreGraphics"
 
   s.description  = <<-DESC
@@ -21,7 +21,4 @@ Pod::Spec.new do |s|
 
   s.ios.source_files  = "Core\ Graphics\ Extended\ Library", "Core\ Graphics\ Extended\ Library\ for\ iOS"
   s.osx.source_files  = "Core\ Graphics\ Extended\ Library", "Core\ Graphics\ Extended\ Library\ for\ OS\ X"
-
-  s.requires_arc = true
-
 end
