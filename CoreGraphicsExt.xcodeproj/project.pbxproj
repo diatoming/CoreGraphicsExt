@@ -113,11 +113,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630EF5C81B779306001A1866 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				63C928DF19F1FE4F00139136 /* CoreGraphicsExt-iOSTests */,
+				63C9291E19F1FE7600139136 /* CoreGraphicsExt-OS-XTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		630EF5C91B7793A4001A1866 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63ED56621B4A34A40074BBFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		63C928C419F1FE3D00139136 = {
 			isa = PBXGroup;
 			children = (
 				63C9292919F2001800139136 /* CoreGraphicsExt */,
 				63ED56661B4A350E0074BBFE /* Targets */,
+				630EF5C81B779306001A1866 /* Tests */,
 				63C928D119F1FE4E00139136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,8 +236,8 @@
 		63ED565F1B4A34A40074BBFE /* CoreGraphicsExt-watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				63ED56621B4A34A40074BBFE /* Info.plist */,
 				63ED566B1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift */,
+				630EF5C91B7793A4001A1866 /* Supporting Files */,
 			);
 			path = "CoreGraphicsExt-watchOS";
 			sourceTree = "<group>";
@@ -228,9 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				63C928D219F1FE4E00139136 /* CoreGraphicsExt-iOS */,
-				63C928DF19F1FE4F00139136 /* CoreGraphicsExt-iOSTests */,
 				63C9291119F1FE7600139136 /* CoreGraphicsExt-OS-X */,
-				63C9291E19F1FE7600139136 /* CoreGraphicsExt-OS-XTests */,
 				63ED565F1B4A34A40074BBFE /* CoreGraphicsExt-watchOS */,
 			);
 			name = Targets;

@@ -9,7 +9,10 @@
 import CoreGraphics
 
 /// Vertices on CGRect
-public enum CGRectVertex: Int, CustomDebugStringConvertible, CustomStringConvertible {
+public enum CGRectVertex: Int,
+    CustomDebugStringConvertible,
+    CustomStringConvertible
+{
     case TopRight    = 0
     case BottomRight = 1
     case BottomLeft  = 2
@@ -46,8 +49,14 @@ public enum CGRectVertex: Int, CustomDebugStringConvertible, CustomStringConvert
 extension CGRect {
     // Get the center of a CGRect value
     public var center: CGPoint {
-        get {return CGPoint(x: origin.x + size.width * 0.5, y: origin.y + size.height * 0.5)}
-        set {origin = CGPoint(x: newValue.x - size.width * 0.5, y: newValue.y - size.height * 0.5)}
+        get {
+            return CGPoint(x: origin.x + size.width * 0.5,
+                y: origin.y + size.height * 0.5)
+        }
+        set {
+            origin = CGPoint(x: newValue.x - size.width * 0.5,
+                y: newValue.y - size.height * 0.5)
+        }
     }
 }
 
@@ -86,9 +95,16 @@ extension CGRect {
         }
     }
     
+    public typealias CGRectVertices = (topRight: CGPoint,
+        bottomRight: CGPoint,
+        bottomLeft: CGPoint,
+        topLeft: CGPoint)
     // Get all the vertices on the rectangle
-    public var vertices: (topRight: CGPoint, bottomRight: CGPoint, bottomLeft: CGPoint, topLeft: CGPoint) {
-        return (self.vertex(.TopRight), self.vertex(.BottomRight), self.vertex(.BottomLeft), self.vertex(.TopLeft))
+    public var vertices: CGRectVertices {
+        return (self.vertex(.TopRight),
+            self.vertex(.BottomRight),
+            self.vertex(.BottomLeft),
+            self.vertex(.TopLeft))
     }
     
     public func enumerate() -> AnySequence<CGPoint> {
@@ -99,18 +115,21 @@ extension CGRect {
 extension CGRect {
     /// Create a CGRect value with a given center and size
     public init(center: CGPoint, size aSize: CGSize) {
-        origin = CGPoint(x: center.x - aSize.width * 0.5, y: center.y - aSize.height * 0.5)
+        origin = CGPoint(x: center.x - aSize.width * 0.5,
+            y: center.y - aSize.height * 0.5)
         size = aSize
     }
     
     /// Create a CGRect value with a given center, width and height
     public init(center: CGPoint, width: CGFloat, height: CGFloat) {
         let aSize = CGSize(width: width, height: height)
-        origin = CGPoint(x: center.x - aSize.width * 0.5, y: center.y - aSize.height * 0.5)
+        origin = CGPoint(x: center.x - aSize.width * 0.5,
+            y: center.y - aSize.height * 0.5)
         size = aSize
     }
     
-    /// Create a CGRect value with a given CGRect value which replace its origin or size if necessary
+    /// Create a CGRect value with a given CGRect value which replace its origin
+    /// or size if necessary
     public init(rect: CGRect, origin anOrigin: CGPoint?, size aSize: CGSize?) {
         if let theOrigin = anOrigin {
             origin = theOrigin
@@ -126,7 +145,10 @@ extension CGRect {
     
     /// Create a CGRect value which covers all the given points
     public init(points: CGPoint ...) {
-        var mostTop = CGFloat.max , mostBottom = -CGFloat.max, mostRight = -CGFloat.max, mostLeft = CGFloat.max
+        var mostTop = CGFloat.max ,
+        mostBottom = -CGFloat.max,
+        mostRight = -CGFloat.max,
+        mostLeft = CGFloat.max
         
         for eachPoint in points {
             if (eachPoint.y < mostTop) { mostTop = eachPoint.y }
@@ -141,7 +163,10 @@ extension CGRect {
     
     /// Create a CGRect value which covers all the given points
     public init(arrayOfPoints: [CGPoint] ...) {
-        var mostTop = CGFloat.max , mostBottom = -CGFloat.max, mostRight = -CGFloat.max, mostLeft = CGFloat.max
+        var mostTop = CGFloat.max ,
+        mostBottom = -CGFloat.max,
+        mostRight = -CGFloat.max,
+        mostLeft = CGFloat.max
         
         for eachPointArray in arrayOfPoints {
             for eachPoint in eachPointArray {
@@ -209,12 +234,14 @@ extension CGRect {
     
     /// Return a CGRect value whose width value replaced by the given value
     public func rectWithWidth(width aWidth: CGFloat) -> CGRect {
-        return CGRect(origin: origin, size: CGSize(width: aWidth, height: size.height))
+        return CGRect(origin: origin,
+            size: CGSize(width: aWidth, height: size.height))
     }
     
     /// Return a CGRect value whose height value replaced by the given value
     public func rectWithHeight(height aHeight: CGFloat) -> CGRect {
-        return CGRect(origin: origin, size: CGSize(width: size.width, height: aHeight))
+        return CGRect(origin: origin,
+            size: CGSize(width: size.width, height: aHeight))
     }
     
     /// Return a CGRect value whose width and height has been swapped
@@ -237,22 +264,28 @@ extension CGRect {
     
     /// Integral
     public var integeral: CGRect {
-        return CGRect(x: ceil(origin.x), y:ceil(origin.y), width: ceil(width), height: ceil(height))
+        return CGRect(x: ceil(origin.x), y:ceil(origin.y),
+            width: ceil(width), height: ceil(height))
     }
     
     /// Mix with an other CGRect
     /// Linear mix the CGFloat value with the given value and percentage
     public func mix(mixedValue: CGRect, percentage: CGFloat) -> CGRect {
-        return CGRect(x: (self.origin.x * (1 - percentage) + mixedValue.origin.x * percentage),
-            y: (self.origin.y * (1 - percentage) + mixedValue.origin.y * percentage),
-            width: (self.size.width * (1 - percentage) + mixedValue.size.width * percentage),
-            height: (self.size.height * (1 - percentage) + mixedValue.size.height * percentage))
+        return CGRect(x: (self.origin.x * (1 - percentage) +
+            mixedValue.origin.x * percentage),
+            y: (self.origin.y * (1 - percentage) +
+                mixedValue.origin.y * percentage),
+            width: (self.size.width * (1 - percentage) +
+                mixedValue.size.width * percentage),
+            height: (self.size.height * (1 - percentage) +
+                mixedValue.size.height * percentage))
     }
 }
 
 extension CGRect {
     /// Check if the rectangle touches the given rectangle
     public func touches(rect: CGRect) -> Bool {
-        return !((maxX < rect.minX || minX > rect.maxX) || (maxY < rect.minY || minY > rect.maxY))
+        return !((maxX < rect.minX || minX > rect.maxX) ||
+            (maxY < rect.minY || minY > rect.maxY))
     }
 }

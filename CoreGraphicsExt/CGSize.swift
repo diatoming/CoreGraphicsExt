@@ -40,8 +40,10 @@ extension CGSize {
 extension CGSize {
     /// Linear mix the size with the given size and percentage
     public func mix(size: CGSize, percentage: CGFloat) -> CGSize {
-        let size = CGSize(width: (self.width * (1 - percentage) + size.width * percentage),
-            height: (self.height * (1 - percentage) + size.height * percentage))
+        let size = CGSize(width: (self.width * (1 - percentage) +
+            size.width * percentage),
+            height: (self.height * (1 - percentage) +
+                size.height * percentage))
         return size
     }
 }
@@ -66,5 +68,6 @@ public func / (lhs: CGSize, rhs: CGFloat) -> CGSize {
 }
 
 public func / (lhs: CGSize, rhs: Int) -> CGSize {
-    return CGSize(width: lhs.width / CGFloat(rhs), height: lhs.height / CGFloat(rhs))
+    return CGSize(width: lhs.width / CGFloat(rhs),
+        height: lhs.height / CGFloat(rhs))
 }
