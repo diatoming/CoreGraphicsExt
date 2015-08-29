@@ -9,13 +9,6 @@
 import CoreGraphics
 
 extension CGPoint {
-    /// Return a zero point
-    public static var zero: CGPoint {
-        return CGPoint.zeroPoint
-    }
-}
-
-extension CGPoint {
     /// Return an offset point with given offset
     public func offset(offset: CGPoint) -> CGPoint {
         var offsetPoint = self

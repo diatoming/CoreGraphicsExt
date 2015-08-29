@@ -184,13 +184,13 @@ extension CGRect {
     /// Create a CGRect value which offsets the given CGRect
     public init(rect: CGRect, offset anOffset: CGPoint) {
         self = rect
-        offset(dx: anOffset.x, dy: anOffset.y)
+        offsetInPlace(dx: anOffset.x, dy: anOffset.y)
     }
     
     /// Create a CGRect value which offsets the given CGRect
     public init(rect: CGRect, dx: CGFloat, dy: CGFloat) {
         self = rect
-        offset(dx: dx, dy: dy)
+        offsetInPlace(dx: dx, dy: dy)
     }
     
     /// Create a CGRect value with given vertices parameters
@@ -251,7 +251,7 @@ extension CGRect {
     
     /// Return a CGRect value with the given size. The origin is zero.
     public init(size: CGSize) {
-        origin = CGPoint.zeroPoint
+        origin = CGPoint.zero
         self.size = size
     }
 }
@@ -259,7 +259,7 @@ extension CGRect {
 extension CGRect {
     /// Return a CGRect value with given offset
     public func rectByOffsetting(point: CGPoint) -> CGRect {
-        return self.rectByOffsetting(dx: point.x, dy: point.y)
+        return self.offsetBy(dx: point.x, dy: point.y)
     }
     
     /// Integral

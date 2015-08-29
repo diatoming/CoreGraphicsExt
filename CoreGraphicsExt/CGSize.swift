@@ -9,11 +9,6 @@
 import CoreGraphics
 
 extension CGSize {
-    /// Create a zero size
-    public static var zero: CGSize {
-        return CGSizeZero
-    }
-    
     /// Create a CGSize value with maximum width and height
     public static var max: CGSize {
         return CGSize(width: CGFloat.max, height: CGFloat.max)
