@@ -27,22 +27,28 @@ extension CGPoint {
         return delta
     }
     
-    /// Check if the point is inside the biggest circle which is inside the given rectangle
+    /// Check if the point is inside the biggest circle which is inside the 
+    /// given rectangle
     public func insideCircleOfRect(rect: CGRect) -> Bool {
         let minimumSideLength = min(rect.size.width, rect.size.height)
-        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) < pow(minimumSideLength, 2)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2)
+            < pow(minimumSideLength, 2)
     }
     
-    /// Check if the point is on the circumference of the biggest circle which is inside the given rectangle
+    /// Check if the point is on the circumference of the biggest circle which
+    /// is inside the given rectangle
     public func onCircleOfRect(rect: CGRect) -> Bool {
         let minimumSideLength = min(rect.size.width, rect.size.height)
-        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) == pow(minimumSideLength, 2)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2)
+            == pow(minimumSideLength, 2)
     }
     
-    /// Check if the point is on the circumference or inside the biggest circle which is inside the given rectangle
+    /// Check if the point is on the circumference or inside the biggest circle
+    /// which is inside the given rectangle
     public func containedByCircleOfRect(rect: CGRect) -> Bool {
         let minimumSideLength = min(rect.size.width, rect.size.height)
-        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2) <= pow(minimumSideLength, 2)
+        return pow(x - rect.midX, 2) + pow(y - rect.midY, 2)
+            <= pow(minimumSideLength, 2)
     }
     
     /// Check if the point is inside the given rectangle
@@ -100,7 +106,8 @@ extension CGPoint {
         return CGPoint(x: midX, y: midY)
     }
     
-    /// Create a point with a given porpotion which separates the origin the destination point
+    /// Create a point with a given porpotion which separates the origin the
+    /// destination point
     init(origin: CGPoint, destination: CGPoint, proportion: CGFloat) {
         let originX = origin.x, originY = origin.y
         let destinationX = destination.x, destinationY = destination.y
@@ -109,19 +116,27 @@ extension CGPoint {
         y = (originY + proportion * destinationY) / (1 + proportion)
     }
     
-    /// Calculate the proportion for point which locates between the origin and the destination
-    public static func proportionForPoint(interpolatePoint: CGPoint, betweenPoints origin: CGPoint, destination: CGPoint) -> CGFloat {
-        let evaluateY = (origin.y - interpolatePoint.y) / (interpolatePoint.y - destination.y)
+    /// Calculate the proportion for point which locates between the origin and
+    /// the destination
+    public static func proportionForPoint(interpolatePoint: CGPoint,
+        betweenPoints origin: CGPoint,
+        destination: CGPoint)
+        -> CGFloat
+    {
+        let evaluateY = (origin.y - interpolatePoint.y) /
+            (interpolatePoint.y - destination.y)
         if evaluateY.isNaN {
-            return (origin.x - interpolatePoint.x) / (interpolatePoint.x - destination.x)
+            return (origin.x - interpolatePoint.x) /
+                (interpolatePoint.x - destination.x)
         }
         return evaluateY
     }
     
     /// Linear mixing a point with the given point and percentage
     public func mix(point: CGPoint, percentage: CGFloat) -> CGPoint {
-        let mixedPoint = CGPointMake((self.x * (1 - percentage) + point.x * percentage),
-            (self.y * (1 - percentage) + point.y * percentage))
+        let mixedPoint = CGPoint(
+            x: (self.x * (1 - percentage) + point.x * percentage),
+            y: (self.y * (1 - percentage) + point.y * percentage))
         return mixedPoint
     }
 }
@@ -142,21 +157,39 @@ public func + (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
+public func += (inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+}
+
 public func - (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+}
+
+public func -= (lhs: CGPoint, inout rhs: CGPoint) {
+    rhs = CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
 }
 
 public func * (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
     return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
 }
+
+public func *= (inout lhs: CGPoint, rhs: CGFloat) {
+    lhs = CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
+}
+
 public func * (lhs: CGFloat, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs * rhs.x, y: lhs * rhs.y)
 }
+
 public func * (lhs: CGPoint, rhs: CGPoint) -> CGFloat {
     return  lhs.x * rhs.x + lhs.y * rhs.y
 }
 
 public func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
     return CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
+}
+
+public func /= (inout lhs: CGPoint, rhs: CGFloat) {
+    lhs = CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
 }
 

@@ -113,14 +113,20 @@ extension CGRect {
 }
 
 extension CGRect {
-    /// Create a CGRect value with a given center and size
+    /// Create a CGRect value with the given size and (0,0) origin.
+    public init(size aSize: CGSize) {
+        origin = CGPoint.zero
+        size = aSize
+    }
+    
+    /// Create a CGRect value with the given center and size
     public init(center: CGPoint, size aSize: CGSize) {
         origin = CGPoint(x: center.x - aSize.width * 0.5,
             y: center.y - aSize.height * 0.5)
         size = aSize
     }
     
-    /// Create a CGRect value with a given center, width and height
+    /// Create a CGRect value with the given center, width and height
     public init(center: CGPoint, width: CGFloat, height: CGFloat) {
         let aSize = CGSize(width: width, height: height)
         origin = CGPoint(x: center.x - aSize.width * 0.5,
@@ -128,9 +134,12 @@ extension CGRect {
         size = aSize
     }
     
-    /// Create a CGRect value with a given CGRect value which replace its origin
-    /// or size if necessary
-    public init(rect: CGRect, origin anOrigin: CGPoint?, size aSize: CGSize?) {
+    /// Create a CGRect value with the given CGRect which replace its origin or
+    /// size if necessary
+    public init(rect: CGRect,
+        origin anOrigin: CGPoint? = nil,
+        size aSize: CGSize? = nil)
+    {
         if let theOrigin = anOrigin {
             origin = theOrigin
         } else {
@@ -143,6 +152,14 @@ extension CGRect {
         }
     }
     
+    /// Create a CGRect value with given vertices parameters
+    public init(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) {
+        origin = CGPointMake(left, top)
+        size = CGSize(width: right - left, height: bottom - top)
+    }
+}
+
+extension CGRect {
     /// Create a CGRect value which covers all the given points
     public init(points: CGPoint ...) {
         var mostTop = CGFloat.max ,
@@ -181,24 +198,6 @@ extension CGRect {
         size = CGSize(width: mostRight - mostLeft, height: mostBottom - mostTop)
     }
     
-    /// Create a CGRect value which offsets the given CGRect
-    public init(rect: CGRect, offset anOffset: CGPoint) {
-        self = rect
-        offsetInPlace(dx: anOffset.x, dy: anOffset.y)
-    }
-    
-    /// Create a CGRect value which offsets the given CGRect
-    public init(rect: CGRect, dx: CGFloat, dy: CGFloat) {
-        self = rect
-        offsetInPlace(dx: dx, dy: dy)
-    }
-    
-    /// Create a CGRect value with given vertices parameters
-    public init(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) {
-        origin = CGPointMake(left, top)
-        size = CGSize(width: right - left, height: bottom - top)
-    }
-    
     /// Create a CGRect value which covers all the given rects
     public init(rects: CGRect...) {
         var points = [CGPoint]()
@@ -220,54 +219,84 @@ extension CGRect {
         }
         self = CGRect(arrayOfPoints: points)
     }
-    
-    /// Return a CGRect value whose origin's x value replaced by the given value
-    public func rectWithOriginX(originX: CGFloat) -> CGRect {
-        return CGRect(origin: CGPoint(x: originX, y: origin.y), size: size)
+}
+
+extension CGRect {
+    /// Return a CGRect value whose origin replaced by the given origin
+    public func replaceOrigin(origin: CGPoint) -> CGRect {
+        return CGRect(origin: origin, size: size)
     }
     
-    
-    /// Return a CGRect value whose origin's y value replaced by the given value
-    public func rectWithOriginY(originY: CGFloat) -> CGRect {
-        return CGRect(origin: CGPoint(x: origin.x, y: originY), size: size)
+    /// Replace rect's origin
+    public mutating func replaceOriginInPlace(origin: CGPoint) {
+        self.origin = origin
     }
     
-    /// Return a CGRect value whose width value replaced by the given value
-    public func rectWithWidth(width aWidth: CGFloat) -> CGRect {
-        return CGRect(origin: origin,
-            size: CGSize(width: aWidth, height: size.height))
+    /// Return a CGRect value whose origin's x and y replaced by the given
+    /// x and y
+    public func replaceOrigin(x x: CGFloat? = nil, y: CGFloat? = nil)
+        -> CGRect
+    {
+        let newOrigin = CGPoint(x: x == nil ? origin.x: x!,
+            y: y == nil ? origin.y: y!)
+        return CGRect(origin: newOrigin, size: size)
     }
     
-    /// Return a CGRect value whose height value replaced by the given value
-    public func rectWithHeight(height aHeight: CGFloat) -> CGRect {
-        return CGRect(origin: origin,
-            size: CGSize(width: size.width, height: aHeight))
+    /// Replace rect's origin
+    public mutating func replaceOriginInPlace(x x: CGFloat? = nil,
+        y: CGFloat? = nil)
+    {
+        let newOrigin = CGPoint(x: x == nil ? origin.x: x!,
+            y: y == nil ? origin.y: y!)
+        self.origin = newOrigin
+    }
+}
+
+
+extension CGRect {
+    /// Return a CGRect value whose size replaced by the given size
+    public func replaceSize(size: CGSize) -> CGRect {
+        return CGRect(origin: origin, size: size)
     }
     
-    /// Return a CGRect value whose width and height has been swapped
-    public func rectWithSwappedDimension() -> CGRect {
-        return CGRectMake(origin.x, origin.y, size.height, size.width);
-    }
-    
-    /// Return a CGRect value with the given size. The origin is zero.
-    public init(size: CGSize) {
-        origin = CGPoint.zero
+    /// Replace rect's size
+    public mutating func replaceSizeInPlace(size: CGSize) {
         self.size = size
+    }
+    
+    /// Return a CGRect value whose size's width and height replaced by the
+    /// given width and height
+    public func replaceSize(width width: CGFloat? = nil, height: CGFloat? = nil)
+        -> CGRect
+    {
+        let newSize = CGSize(width: width == nil ? size.width: width!,
+            height: height == nil ? size.height: height!)
+        return CGRect(origin: origin, size: newSize)
+    }
+    
+    /// Replace rect's size
+    public mutating func replaceSizeInPlace(width width: CGFloat? = nil,
+        height: CGFloat? = nil)
+    {
+        let newSize = CGSize(width: width == nil ? size.width: width!,
+            height: height == nil ? size.height: height!)
+        self.size = newSize
     }
 }
 
 extension CGRect {
-    /// Return a CGRect value with given offset
-    public func rectByOffsetting(point: CGPoint) -> CGRect {
-        return self.offsetBy(dx: point.x, dy: point.y)
+    /// Return a CGRect value whose width and height has been swapped
+    public func swapDimension() -> CGRect {
+        return CGRectMake(origin.x, origin.y, size.height, size.width);
     }
     
-    /// Integral
-    public var integeral: CGRect {
-        return CGRect(x: ceil(origin.x), y:ceil(origin.y),
-            width: ceil(width), height: ceil(height))
+    /// Swap rect's width and height
+    public mutating func swapDimensionInPlace() {
+        self.size = self.size.swapDimension()
     }
-    
+}
+
+extension CGRect {
     /// Mix with an other CGRect
     /// Linear mix the CGFloat value with the given value and percentage
     public func mix(mixedValue: CGRect, percentage: CGFloat) -> CGRect {
@@ -283,9 +312,121 @@ extension CGRect {
 }
 
 extension CGRect {
+    public func offsetBy(offset: CGPoint) -> CGRect {
+        return offsetBy(dx: offset.x, dy: offset.y)
+    }
+    
+    public mutating func offsetInPlace(offset: CGPoint) {
+        offsetInPlace(dx: offset.x, dy: offset.y)
+    }
+}
+
+extension CGRect {
     /// Check if the rectangle touches the given rectangle
     public func touches(rect: CGRect) -> Bool {
         return !((maxX < rect.minX || minX > rect.maxX) ||
             (maxY < rect.minY || minY > rect.maxY))
+    }
+}
+
+public enum CGCoordinateSystemAxis: Int {
+    case Horizontal
+    case Vertical
+}
+
+extension CGRect {
+    public enum AlginmentAnchor: Int {
+        case Min, Mid, Max
+    }
+    
+    public mutating func alignAnchor(anchor: AlginmentAnchor,
+        onAxis axis: CGCoordinateSystemAxis,
+        withAnchor referenceRectAnchor: AlginmentAnchor,
+        ofRectInPlace referenceRect: CGRect)
+    {
+        self = alignAnchor(anchor,
+            onAxis: axis,
+            withAnchor: referenceRectAnchor,
+            ofRect: referenceRect)
+    }
+    
+    public func alignAnchor(anchor: AlginmentAnchor,
+        onAxis axis: CGCoordinateSystemAxis,
+        withAnchor referenceRectAnchor: AlginmentAnchor,
+        ofRect referenceRect: CGRect)
+         -> CGRect
+    {
+        switch axis {
+        case .Vertical:
+            switch (anchor, referenceRectAnchor) {
+            case (.Min, .Min):
+                return CGRect(origin: CGPoint(x: referenceRect.minX, y: minY),
+                    size: size)
+            case (.Min, .Mid):
+                return CGRect(origin: CGPoint(x: referenceRect.midX, y: minY),
+                    size: size)
+            case (.Min, .Max):
+                return CGRect(origin: CGPoint(x: referenceRect.maxX, y: minY),
+                    size: size)
+                
+            case (.Max, .Max):
+                let origin = CGPoint(x: referenceRect.maxX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Mid):
+                let origin = CGPoint(x: referenceRect.midX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Min):
+                let origin = CGPoint(x: referenceRect.minX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+                
+            case (.Mid, .Min):
+                return CGRect(center: CGPoint(x: referenceRect.minX, y: minY),
+                    size: size)
+            case (.Mid, .Mid):
+                return CGRect(center: CGPoint(x: referenceRect.midX, y: minY),
+                    size: size)
+            case (.Mid, .Max):
+                return CGRect(center: CGPoint(x: referenceRect.maxX, y: minY),
+                    size: size)
+            }
+        case .Horizontal:
+            switch (anchor, referenceRectAnchor) {
+            case (.Min, .Min):
+                return CGRect(origin: CGPoint(x: minX, y: referenceRect.minY),
+                    size: size)
+            case (.Min, .Mid):
+                return CGRect(origin: CGPoint(x: minX, y: referenceRect.midY),
+                    size: size)
+            case (.Min, .Max):
+                return CGRect(origin: CGPoint(x: minX, y: referenceRect.maxY),
+                    size: size)
+                
+            case (.Max, .Max):
+                let origin = CGPoint(x: minX,
+                    y: referenceRect.maxY - size.height)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Mid):
+                let origin = CGPoint(x: minX,
+                    y: referenceRect.midX - size.height)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Min):
+                let origin = CGPoint(x: minX,
+                    y: referenceRect.minY - size.height)
+                return CGRect(origin: origin, size: size)
+                
+            case (.Mid, .Min):
+                return CGRect(center: CGPoint(x: minX, y: referenceRect.minY),
+                    size: size)
+            case (.Mid, .Mid):
+                return CGRect(center: CGPoint(x: minX, y: referenceRect.midY),
+                    size: size)
+            case (.Mid, .Max):
+                return CGRect(center: CGPoint(x: minX, y: referenceRect.maxY),
+                    size: size)
+            }
+        }
     }
 }
