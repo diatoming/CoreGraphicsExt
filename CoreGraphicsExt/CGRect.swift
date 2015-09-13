@@ -360,41 +360,6 @@ extension CGRect {
         case .Vertical:
             switch (anchor, referenceRectAnchor) {
             case (.Min, .Min):
-                return CGRect(origin: CGPoint(x: referenceRect.minX, y: minY),
-                    size: size)
-            case (.Min, .Mid):
-                return CGRect(origin: CGPoint(x: referenceRect.midX, y: minY),
-                    size: size)
-            case (.Min, .Max):
-                return CGRect(origin: CGPoint(x: referenceRect.maxX, y: minY),
-                    size: size)
-                
-            case (.Max, .Max):
-                let origin = CGPoint(x: referenceRect.maxX - size.width,
-                    y: minY)
-                return CGRect(origin: origin, size: size)
-            case (.Max, .Mid):
-                let origin = CGPoint(x: referenceRect.midX - size.width,
-                    y: minY)
-                return CGRect(origin: origin, size: size)
-            case (.Max, .Min):
-                let origin = CGPoint(x: referenceRect.minX - size.width,
-                    y: minY)
-                return CGRect(origin: origin, size: size)
-                
-            case (.Mid, .Min):
-                return CGRect(center: CGPoint(x: referenceRect.minX, y: minY),
-                    size: size)
-            case (.Mid, .Mid):
-                return CGRect(center: CGPoint(x: referenceRect.midX, y: minY),
-                    size: size)
-            case (.Mid, .Max):
-                return CGRect(center: CGPoint(x: referenceRect.maxX, y: minY),
-                    size: size)
-            }
-        case .Horizontal:
-            switch (anchor, referenceRectAnchor) {
-            case (.Min, .Min):
                 return CGRect(origin: CGPoint(x: minX, y: referenceRect.minY),
                     size: size)
             case (.Min, .Mid):
@@ -418,13 +383,48 @@ extension CGRect {
                 return CGRect(origin: origin, size: size)
                 
             case (.Mid, .Min):
-                return CGRect(center: CGPoint(x: minX, y: referenceRect.minY),
+                return CGRect(center: CGPoint(x: midX, y: referenceRect.minY),
                     size: size)
             case (.Mid, .Mid):
-                return CGRect(center: CGPoint(x: minX, y: referenceRect.midY),
+                return CGRect(center: CGPoint(x: midX, y: referenceRect.midY),
                     size: size)
             case (.Mid, .Max):
-                return CGRect(center: CGPoint(x: minX, y: referenceRect.maxY),
+                return CGRect(center: CGPoint(x: midX, y: referenceRect.maxY),
+                    size: size)
+            }
+        case .Horizontal:
+            switch (anchor, referenceRectAnchor) {
+            case (.Min, .Min):
+                return CGRect(origin: CGPoint(x: referenceRect.minX, y: minY),
+                    size: size)
+            case (.Min, .Mid):
+                return CGRect(origin: CGPoint(x: referenceRect.midX, y: minY),
+                    size: size)
+            case (.Min, .Max):
+                return CGRect(origin: CGPoint(x: referenceRect.maxX, y: minY),
+                    size: size)
+                
+            case (.Max, .Max):
+                let origin = CGPoint(x: referenceRect.maxX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Mid):
+                let origin = CGPoint(x: referenceRect.midX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+            case (.Max, .Min):
+                let origin = CGPoint(x: referenceRect.minX - size.width,
+                    y: minY)
+                return CGRect(origin: origin, size: size)
+                
+            case (.Mid, .Min):
+                return CGRect(center: CGPoint(x: referenceRect.minX, y: midY),
+                    size: size)
+            case (.Mid, .Mid):
+                return CGRect(center: CGPoint(x: referenceRect.midX, y: midY),
+                    size: size)
+            case (.Mid, .Max):
+                return CGRect(center: CGPoint(x: referenceRect.maxX, y: midY),
                     size: size)
             }
         }
