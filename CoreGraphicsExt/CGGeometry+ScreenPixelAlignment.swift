@@ -8,12 +8,12 @@
 
 import CoreGraphics
 
-enum ScreenPixelAlignmentPolicy: Int {
+public enum ScreenPixelAlignmentPolicy: Int {
     case Ceil, Floor
 }
 
 extension CGFloat {
-    func alignToScreenPixel(
+    public func alignToScreenPixel(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGFloat
     {
@@ -30,7 +30,7 @@ extension CGFloat {
 }
 
 extension CGPoint {
-    func alignToScreenPixel(
+    public func alignToScreenPixel(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGPoint
     {
@@ -50,7 +50,7 @@ extension CGPoint {
 }
 
 extension CGSize {
-    func alignToScreenPixel(
+    public func alignToScreenPixel(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGSize
     {
