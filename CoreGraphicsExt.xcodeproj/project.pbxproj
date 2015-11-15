@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635F96AC1BF057C600A57670 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */; };
+		635F96AD1BF057C600A57670 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */; };
 		63C928DC19F1FE4F00139136 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */; };
 		63C928E319F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C928E219F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift */; };
 		63C9291B19F1FE7600139136 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */; };
@@ -49,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignment.swift"; sourceTree = "<group>"; };
 		63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C928D419F1FE4F00139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C928DB19F1FE4F00139136 /* CoreGraphicsExt-for-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreGraphicsExt-for-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */,
+				635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */,
 				63C928D319F1FE4F00139136 /* Supporting Files */,
 			);
 			path = "CoreGraphicsExt-iOS";
@@ -464,6 +468,7 @@
 				63C9295719F21F7800139136 /* CGSize.swift in Sources */,
 				63C9293219F202ED00139136 /* CGFloat.swift in Sources */,
 				63C9293519F2035D00139136 /* CGPoint.swift in Sources */,
+				635F96AC1BF057C600A57670 /* CGRect+Alignment.swift in Sources */,
 				63C9293819F2138900139136 /* CGRect.swift in Sources */,
 				63ED566E1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
 				63F4CF7C1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift in Sources */,
@@ -506,6 +511,7 @@
 				63ED566A1B4A351F0074BBFE /* CGSize.swift in Sources */,
 				63ED56681B4A351F0074BBFE /* CGPoint.swift in Sources */,
 				63ED566C1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift in Sources */,
+				635F96AD1BF057C600A57670 /* CGRect+Alignment.swift in Sources */,
 				63ED56691B4A351F0074BBFE /* CGRect.swift in Sources */,
 				63ED56701B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
 				63ED56671B4A351F0074BBFE /* CGFloat.swift in Sources */,
