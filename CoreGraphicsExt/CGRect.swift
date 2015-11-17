@@ -329,11 +329,6 @@ extension CGRect {
     }
 }
 
-public enum CGCoordinateSystemAxis: Int {
-    case Horizontal
-    case Vertical
-}
-
 public protocol CGRectAnchorType {
     func ofRect(alignedRect: CGRect,
         alignTo side: Self,

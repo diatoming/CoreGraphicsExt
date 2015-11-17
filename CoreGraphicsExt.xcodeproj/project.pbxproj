@@ -7,27 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		635F0FBC1BF98DC2004982B4 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F0FBB1BF98DC2004982B4 /* CGRect+Alignment.swift */; };
-		635F0FC51BF98EDC004982B4 /* CoreGraphicsExt-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 635F0FC41BF98EDC004982B4 /* CoreGraphicsExt-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		635F0FCC1BF98EDD004982B4 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0FC21BF98EDC004982B4 /* CoreGraphicsExt.framework */; };
-		635F0FD11BF98EDD004982B4 /* CoreGraphicsExt_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F0FD01BF98EDD004982B4 /* CoreGraphicsExt_tvOSTests.swift */; };
 		635F0FD91BF98EF0004982B4 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293119F202ED00139136 /* CGFloat.swift */; };
 		635F0FDA1BF98EF0004982B4 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293419F2035D00139136 /* CGPoint.swift */; };
 		635F0FDB1BF98EF0004982B4 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293719F2138900139136 /* CGRect.swift */; };
 		635F0FDC1BF98EF0004982B4 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9295619F21F7800139136 /* CGSize.swift */; };
-		635F0FE01BF98F3F004982B4 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */; };
-		635F0FE11BF98F71004982B4 /* CGGeometry+ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */; };
-		635F0FE21BF98F75004982B4 /* CGGeometry+UIKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */; };
+		635F0FE11BF98F71004982B4 /* ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */; };
 		635F107E1BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */; };
 		635F107F1BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */; };
 		635F10801BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */; };
 		635F10811BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */; };
-		635F96AC1BF057C600A57670 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */; };
-		635F96AD1BF057C600A57670 /* CGRect+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */; };
+		635F12CD1BFB2028004982B4 /* ScreenPixelAlignment+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12CC1BFB2024004982B4 /* ScreenPixelAlignment+AppKit.swift */; };
+		635F12CF1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12CE1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift */; };
+		635F12D01BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12CE1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift */; };
+		635F12D21BFB204A004982B4 /* ScreenPixelAlignment+WatchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12D11BFB204A004982B4 /* ScreenPixelAlignment+WatchKit.swift */; };
+		635F12D41BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12D31BFB212A004982B4 /* CGRect+Alignment+UIKit.swift */; };
+		635F12D51BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12D31BFB212A004982B4 /* CGRect+Alignment+UIKit.swift */; };
+		635F12D61BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12D31BFB212A004982B4 /* CGRect+Alignment+UIKit.swift */; };
+		635F12D81BFB2136004982B4 /* CGRect+Alignment+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F12D71BFB2136004982B4 /* CGRect+Alignment+AppKit.swift */; };
 		63C928DC19F1FE4F00139136 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */; };
-		63C928E319F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C928E219F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift */; };
 		63C9291B19F1FE7600139136 /* CoreGraphicsExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */; };
-		63C9292219F1FE7700139136 /* CoreGraphicsExt_OS_XTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9292119F1FE7700139136 /* CoreGraphicsExt_OS_XTests.swift */; };
 		63C9293219F202ED00139136 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293119F202ED00139136 /* CGFloat.swift */; };
 		63C9293319F202ED00139136 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293119F202ED00139136 /* CGFloat.swift */; };
 		63C9293519F2035D00139136 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293419F2035D00139136 /* CGPoint.swift */; };
@@ -40,12 +39,9 @@
 		63ED56681B4A351F0074BBFE /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293419F2035D00139136 /* CGPoint.swift */; };
 		63ED56691B4A351F0074BBFE /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9293719F2138900139136 /* CGRect.swift */; };
 		63ED566A1B4A351F0074BBFE /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9295619F21F7800139136 /* CGSize.swift */; };
-		63ED566C1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566B1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift */; };
-		63ED566E1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */; };
-		63ED566F1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */; };
-		63ED56701B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */; };
-		63F4CF7C1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */; };
-		63F4CF7E1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */; };
+		63ED566E1B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */; };
+		63ED566F1B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */; };
+		63ED56701B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,36 +69,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		635F0FBB1BF98DC2004982B4 /* CGRect+Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignment.swift"; sourceTree = "<group>"; };
 		635F0FC21BF98EDC004982B4 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		635F0FC41BF98EDC004982B4 /* CoreGraphicsExt-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreGraphicsExt-tvOS.h"; sourceTree = "<group>"; };
-		635F0FC61BF98EDC004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635F0FCB1BF98EDD004982B4 /* CoreGraphicsExt-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreGraphicsExt-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		635F0FD01BF98EDD004982B4 /* CoreGraphicsExt_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_tvOSTests.swift; sourceTree = "<group>"; };
-		635F0FD21BF98EDD004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPath+Equatable.swift"; sourceTree = "<group>"; };
-		635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignment.swift"; sourceTree = "<group>"; };
+		635F12B81BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12BA1BFB1F24004982B4 /* CoreGraphicsExt_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_iOSTests.swift; sourceTree = "<group>"; };
+		635F12BB1BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12BF1BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12C11BFB1F24004982B4 /* CoreGraphicsExt_OS_XTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_OS_XTests.swift; sourceTree = "<group>"; };
+		635F12C21BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12C51BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12C71BFB1F24004982B4 /* CoreGraphicsExt_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_tvOSTests.swift; sourceTree = "<group>"; };
+		635F12C81BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12CB1BFB1F24004982B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635F12CC1BFB2024004982B4 /* ScreenPixelAlignment+AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenPixelAlignment+AppKit.swift"; sourceTree = "<group>"; };
+		635F12CE1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenPixelAlignment+UIKit.swift"; sourceTree = "<group>"; };
+		635F12D11BFB204A004982B4 /* ScreenPixelAlignment+WatchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenPixelAlignment+WatchKit.swift"; sourceTree = "<group>"; };
+		635F12D31BFB212A004982B4 /* CGRect+Alignment+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignment+UIKit.swift"; sourceTree = "<group>"; };
+		635F12D71BFB2136004982B4 /* CGRect+Alignment+AppKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignment+AppKit.swift"; sourceTree = "<group>"; };
 		63C928D019F1FE4E00139136 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63C928D419F1FE4F00139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C928DB19F1FE4F00139136 /* CoreGraphicsExt-for-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreGraphicsExt-for-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63C928E119F1FE4F00139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C928E219F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_iOSTests.swift; sourceTree = "<group>"; };
 		63C9291019F1FE7600139136 /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63C9291319F1FE7600139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C9291A19F1FE7600139136 /* CoreGraphicsExt-for-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreGraphicsExt-for-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63C9292019F1FE7600139136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C9292119F1FE7700139136 /* CoreGraphicsExt_OS_XTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExt_OS_XTests.swift; sourceTree = "<group>"; };
-		63C9292A19F200B400139136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		63C9293119F202ED00139136 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		63C9293419F2035D00139136 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		63C9293719F2138900139136 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		63C9295619F21F7800139136 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		63ED565E1B4A34A40074BBFE /* CoreGraphicsExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreGraphicsExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63ED56621B4A34A40074BBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63ED566B1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+WatchKitAddition.swift"; sourceTree = "<group>"; };
-		63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+ScreenPixelAlignment.swift"; sourceTree = "<group>"; };
-		63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+UIKitAddition.swift"; sourceTree = "<group>"; };
-		63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+AppKitAddition.swift"; sourceTree = "<group>"; };
+		63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPixelAlignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,47 +155,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		630EF5C81B779306001A1866 /* Tests */ = {
+		635F12B01BFB1F24004982B4 /* FrameworkDependent */ = {
 			isa = PBXGroup;
 			children = (
-				63C928DF19F1FE4F00139136 /* CoreGraphicsExt-iOSTests */,
-				63C9291E19F1FE7600139136 /* CoreGraphicsExt-OS-XTests */,
+				635F12B11BFB1F24004982B4 /* AppKit */,
+				635F12B21BFB1F24004982B4 /* UIKit */,
+				635F12B31BFB1F24004982B4 /* WatchKit */,
 			);
-			name = Tests;
+			path = FrameworkDependent;
 			sourceTree = "<group>";
 		};
-		630EF5C91B7793A4001A1866 /* Supporting Files */ = {
+		635F12B11BFB1F24004982B4 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
-				63ED56621B4A34A40074BBFE /* Info.plist */,
+				635F12D71BFB2136004982B4 /* CGRect+Alignment+AppKit.swift */,
+				635F12CC1BFB2024004982B4 /* ScreenPixelAlignment+AppKit.swift */,
 			);
-			name = "Supporting Files";
+			path = AppKit;
 			sourceTree = "<group>";
 		};
-		635F0FC31BF98EDC004982B4 /* CoreGraphicsExt-tvOS */ = {
+		635F12B21BFB1F24004982B4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				635F0FC41BF98EDC004982B4 /* CoreGraphicsExt-tvOS.h */,
-				635F0FC61BF98EDC004982B4 /* Info.plist */,
+				635F12D31BFB212A004982B4 /* CGRect+Alignment+UIKit.swift */,
+				635F12CE1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		635F12B31BFB1F24004982B4 /* WatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				635F12D11BFB204A004982B4 /* ScreenPixelAlignment+WatchKit.swift */,
+			);
+			path = WatchKit;
+			sourceTree = "<group>";
+		};
+		635F12B41BFB1F24004982B4 /* PlatformDependent */ = {
+			isa = PBXGroup;
+			children = (
+				635F12B51BFB1F24004982B4 /* CoreGraphicsExt-iOS */,
+				635F12B91BFB1F24004982B4 /* CoreGraphicsExt-iOSTests */,
+				635F12BC1BFB1F24004982B4 /* CoreGraphicsExt-OS-X */,
+				635F12C01BFB1F24004982B4 /* CoreGraphicsExt-OS-XTests */,
+				635F12C31BFB1F24004982B4 /* CoreGraphicsExt-tvOS */,
+				635F12C61BFB1F24004982B4 /* CoreGraphicsExt-tvOSTests */,
+				635F12C91BFB1F24004982B4 /* CoreGraphicsExt-watchOS */,
+			);
+			path = PlatformDependent;
+			sourceTree = "<group>";
+		};
+		635F12B51BFB1F24004982B4 /* CoreGraphicsExt-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				635F12B81BFB1F24004982B4 /* Info.plist */,
+			);
+			path = "CoreGraphicsExt-iOS";
+			sourceTree = "<group>";
+		};
+		635F12B91BFB1F24004982B4 /* CoreGraphicsExt-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				635F12BA1BFB1F24004982B4 /* CoreGraphicsExt_iOSTests.swift */,
+				635F12BB1BFB1F24004982B4 /* Info.plist */,
+			);
+			path = "CoreGraphicsExt-iOSTests";
+			sourceTree = "<group>";
+		};
+		635F12BC1BFB1F24004982B4 /* CoreGraphicsExt-OS-X */ = {
+			isa = PBXGroup;
+			children = (
+				635F12BF1BFB1F24004982B4 /* Info.plist */,
+			);
+			path = "CoreGraphicsExt-OS-X";
+			sourceTree = "<group>";
+		};
+		635F12C01BFB1F24004982B4 /* CoreGraphicsExt-OS-XTests */ = {
+			isa = PBXGroup;
+			children = (
+				635F12C11BFB1F24004982B4 /* CoreGraphicsExt_OS_XTests.swift */,
+				635F12C21BFB1F24004982B4 /* Info.plist */,
+			);
+			path = "CoreGraphicsExt-OS-XTests";
+			sourceTree = "<group>";
+		};
+		635F12C31BFB1F24004982B4 /* CoreGraphicsExt-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				635F12C51BFB1F24004982B4 /* Info.plist */,
 			);
 			path = "CoreGraphicsExt-tvOS";
 			sourceTree = "<group>";
 		};
-		635F0FCF1BF98EDD004982B4 /* CoreGraphicsExt-tvOSTests */ = {
+		635F12C61BFB1F24004982B4 /* CoreGraphicsExt-tvOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				635F0FD01BF98EDD004982B4 /* CoreGraphicsExt_tvOSTests.swift */,
-				635F0FD21BF98EDD004982B4 /* Info.plist */,
+				635F12C71BFB1F24004982B4 /* CoreGraphicsExt_tvOSTests.swift */,
+				635F12C81BFB1F24004982B4 /* Info.plist */,
 			);
 			path = "CoreGraphicsExt-tvOSTests";
+			sourceTree = "<group>";
+		};
+		635F12C91BFB1F24004982B4 /* CoreGraphicsExt-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				635F12CB1BFB1F24004982B4 /* Info.plist */,
+			);
+			path = "CoreGraphicsExt-watchOS";
 			sourceTree = "<group>";
 		};
 		63C928C419F1FE3D00139136 = {
 			isa = PBXGroup;
 			children = (
 				63C9292919F2001800139136 /* CoreGraphicsExt */,
-				63ED56661B4A350E0074BBFE /* Targets */,
-				630EF5C81B779306001A1866 /* Tests */,
+				635F12B01BFB1F24004982B4 /* FrameworkDependent */,
+				635F12B41BFB1F24004982B4 /* PlatformDependent */,
 				63C928D119F1FE4E00139136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,77 +288,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63C928D219F1FE4E00139136 /* CoreGraphicsExt-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				63F4CF7B1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift */,
-				635F96AB1BF057C600A57670 /* CGRect+Alignment.swift */,
-				63C928D319F1FE4F00139136 /* Supporting Files */,
-			);
-			path = "CoreGraphicsExt-iOS";
-			sourceTree = "<group>";
-		};
-		63C928D319F1FE4F00139136 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				63C928D419F1FE4F00139136 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63C928DF19F1FE4F00139136 /* CoreGraphicsExt-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				63C928E219F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift */,
-				63C928E019F1FE4F00139136 /* Supporting Files */,
-			);
-			path = "CoreGraphicsExt-iOSTests";
-			sourceTree = "<group>";
-		};
-		63C928E019F1FE4F00139136 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				63C928E119F1FE4F00139136 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63C9291119F1FE7600139136 /* CoreGraphicsExt-OS-X */ = {
-			isa = PBXGroup;
-			children = (
-				63F4CF7D1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift */,
-				635F0FBB1BF98DC2004982B4 /* CGRect+Alignment.swift */,
-				63C9291219F1FE7600139136 /* Supporting Files */,
-			);
-			path = "CoreGraphicsExt-OS-X";
-			sourceTree = "<group>";
-		};
-		63C9291219F1FE7600139136 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				63C9292A19F200B400139136 /* CoreGraphics.framework */,
-				63C9291319F1FE7600139136 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63C9291E19F1FE7600139136 /* CoreGraphicsExt-OS-XTests */ = {
-			isa = PBXGroup;
-			children = (
-				63C9292119F1FE7700139136 /* CoreGraphicsExt_OS_XTests.swift */,
-				63C9291F19F1FE7600139136 /* Supporting Files */,
-			);
-			path = "CoreGraphicsExt-OS-XTests";
-			sourceTree = "<group>";
-		};
-		63C9291F19F1FE7600139136 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				63C9292019F1FE7600139136 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		63C9292919F2001800139136 /* CoreGraphicsExt */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,30 +296,9 @@
 				63C9293719F2138900139136 /* CGRect.swift */,
 				63C9295619F21F7800139136 /* CGSize.swift */,
 				635F107D1BFADBCA004982B4 /* CGPath+Equatable.swift */,
-				63ED566D1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift */,
+				63ED566D1B4A369C0074BBFE /* ScreenPixelAlignment.swift */,
 			);
 			path = CoreGraphicsExt;
-			sourceTree = "<group>";
-		};
-		63ED565F1B4A34A40074BBFE /* CoreGraphicsExt-watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				63ED566B1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift */,
-				630EF5C91B7793A4001A1866 /* Supporting Files */,
-			);
-			path = "CoreGraphicsExt-watchOS";
-			sourceTree = "<group>";
-		};
-		63ED56661B4A350E0074BBFE /* Targets */ = {
-			isa = PBXGroup;
-			children = (
-				63C928D219F1FE4E00139136 /* CoreGraphicsExt-iOS */,
-				63C9291119F1FE7600139136 /* CoreGraphicsExt-OS-X */,
-				63ED565F1B4A34A40074BBFE /* CoreGraphicsExt-watchOS */,
-				635F0FC31BF98EDC004982B4 /* CoreGraphicsExt-tvOS */,
-				635F0FCF1BF98EDD004982B4 /* CoreGraphicsExt-tvOSTests */,
-			);
-			name = Targets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +308,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635F0FC51BF98EDC004982B4 /* CoreGraphicsExt-tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,10 +579,10 @@
 			files = (
 				635F0FDC1BF98EF0004982B4 /* CGSize.swift in Sources */,
 				635F0FDA1BF98EF0004982B4 /* CGPoint.swift in Sources */,
-				635F0FE21BF98F75004982B4 /* CGGeometry+UIKitAddition.swift in Sources */,
+				635F12D01BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift in Sources */,
+				635F12D61BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */,
 				635F0FDB1BF98EF0004982B4 /* CGRect.swift in Sources */,
-				635F0FE01BF98F3F004982B4 /* CGRect+Alignment.swift in Sources */,
-				635F0FE11BF98F71004982B4 /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
+				635F0FE11BF98F71004982B4 /* ScreenPixelAlignment.swift in Sources */,
 				635F0FD91BF98EF0004982B4 /* CGFloat.swift in Sources */,
 				635F10811BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */,
 			);
@@ -617,7 +592,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635F0FD11BF98EDD004982B4 /* CoreGraphicsExt_tvOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,11 +601,11 @@
 			files = (
 				63C9295719F21F7800139136 /* CGSize.swift in Sources */,
 				63C9293219F202ED00139136 /* CGFloat.swift in Sources */,
+				635F12CF1BFB2035004982B4 /* ScreenPixelAlignment+UIKit.swift in Sources */,
+				635F12D41BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */,
 				63C9293519F2035D00139136 /* CGPoint.swift in Sources */,
-				635F96AC1BF057C600A57670 /* CGRect+Alignment.swift in Sources */,
 				63C9293819F2138900139136 /* CGRect.swift in Sources */,
-				63ED566E1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
-				63F4CF7C1AB5432200A48D93 /* CGGeometry+UIKitAddition.swift in Sources */,
+				63ED566E1B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */,
 				635F107E1BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +614,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C928E319F1FE4F00139136 /* CoreGraphicsExt_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,13 +621,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635F12CD1BFB2028004982B4 /* ScreenPixelAlignment+AppKit.swift in Sources */,
 				63C9295819F21F7C00139136 /* CGSize.swift in Sources */,
 				63C9293319F202ED00139136 /* CGFloat.swift in Sources */,
+				635F12D81BFB2136004982B4 /* CGRect+Alignment+AppKit.swift in Sources */,
 				63C9293619F2035D00139136 /* CGPoint.swift in Sources */,
-				635F0FBC1BF98DC2004982B4 /* CGRect+Alignment.swift in Sources */,
 				63C9293919F2138900139136 /* CGRect.swift in Sources */,
-				63ED566F1B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
-				63F4CF7E1AB5463F00A48D93 /* CGGeometry+AppKitAddition.swift in Sources */,
+				63ED566F1B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */,
 				635F107F1BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +636,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C9292219F1FE7700139136 /* CoreGraphicsExt_OS_XTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,12 +643,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635F12D21BFB204A004982B4 /* ScreenPixelAlignment+WatchKit.swift in Sources */,
 				63ED566A1B4A351F0074BBFE /* CGSize.swift in Sources */,
 				63ED56681B4A351F0074BBFE /* CGPoint.swift in Sources */,
-				63ED566C1B4A35DC0074BBFE /* CGGeometry+WatchKitAddition.swift in Sources */,
-				635F96AD1BF057C600A57670 /* CGRect+Alignment.swift in Sources */,
+				635F12D51BFB212A004982B4 /* CGRect+Alignment+UIKit.swift in Sources */,
 				63ED56691B4A351F0074BBFE /* CGRect.swift in Sources */,
-				63ED56701B4A369C0074BBFE /* CGGeometry+ScreenPixelAlignment.swift in Sources */,
+				63ED56701B4A369C0074BBFE /* ScreenPixelAlignment.swift in Sources */,
 				63ED56671B4A351F0074BBFE /* CGFloat.swift in Sources */,
 				635F10801BFADBCA004982B4 /* CGPath+Equatable.swift in Sources */,
 			);
@@ -742,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-tvOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -790,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-tvOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -839,7 +811,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WeZZard.CoreGraphicsExt-tvOSTests";
@@ -878,7 +850,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WeZZard.CoreGraphicsExt-tvOSTests";
@@ -951,7 +923,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-iOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -998,7 +970,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-iOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1050,7 +1022,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-iOSTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1093,7 +1065,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-iOSTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1144,7 +1116,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-OS-X/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-OS-X/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1192,7 +1164,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-OS-X/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-OS-X/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1242,7 +1214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-OS-XTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-OS-XTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1286,7 +1258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-OS-XTests/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-OS-XTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1333,7 +1305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-watchOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1380,7 +1352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CoreGraphicsExt-watchOS/Info.plist";
+				INFOPLIST_FILE = "PlatformDependent/CoreGraphicsExt-watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
