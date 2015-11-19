@@ -1,5 +1,5 @@
 //
-//  ScreenPixelAlignment+WatchKit.swift
+//  ScreenPixelAlignment-WatchKit.swift
 //  CoreGraphicsExt
 //
 //  Created by Manfred on 11/17/15.

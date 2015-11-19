@@ -1,5 +1,5 @@
 //
-//  CGRect+Alignment+AppKit.swift
+//  CGRect+Alignment-AppKit.swift
 //  CoreGraphicsExt
 //
 //  Created by Manfred on 11/16/15.

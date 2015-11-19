@@ -1,13 +1,13 @@
 //
-//  ScreenPixelAlignment+UIKit.swift
+//  ScreenPixelAlignment-AppKit.swift
 //  CoreGraphicsExt
 //
 //  Created by Manfred on 11/17/15.
 //
 //
 
-import UIKit
+import AppKit
 
 func screenScale() -> CGFloat? {
-    return UIScreen.mainScreen().scale
+    return NSScreen.mainScreen()?.backingScaleFactor
 }

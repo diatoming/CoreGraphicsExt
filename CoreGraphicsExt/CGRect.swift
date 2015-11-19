@@ -151,51 +151,45 @@ extension CGRect {
             size = rect.size
         }
     }
-    
-    /// Create a CGRect value with given vertices parameters
-    public init(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) {
-        origin = CGPointMake(left, top)
-        size = CGSize(width: right - left, height: bottom - top)
-    }
 }
 
 extension CGRect {
     /// Create a CGRect value which covers all the given points
     public init(points: CGPoint ...) {
-        var mostTop = CGFloat.max ,
-        mostBottom = -CGFloat.max,
-        mostRight = -CGFloat.max,
-        mostLeft = CGFloat.max
+        var minY = CGFloat.max ,
+        maxY = -CGFloat.max,
+        maxX = -CGFloat.max,
+        minX = CGFloat.max
         
         for eachPoint in points {
-            if (eachPoint.y < mostTop) { mostTop = eachPoint.y }
-            if (eachPoint.x > mostRight) { mostRight = eachPoint.x }
-            if (eachPoint.y > mostBottom) { mostBottom = eachPoint.y }
-            if (eachPoint.x < mostLeft) { mostLeft = eachPoint.x }
+            if (eachPoint.y < minY) { minY = eachPoint.y }
+            if (eachPoint.x > maxX) { maxX = eachPoint.x }
+            if (eachPoint.y > maxY) { maxY = eachPoint.y }
+            if (eachPoint.x < minX) { minX = eachPoint.x }
         }
         
-        origin = CGPointMake(mostLeft, mostTop)
-        size = CGSize(width: mostRight - mostLeft, height: mostBottom - mostTop)
+        origin = CGPointMake(minX, minY)
+        size = CGSize(width: maxX - minX, height: maxY - minY)
     }
     
     /// Create a CGRect value which covers all the given points
     public init(arrayOfPoints: [CGPoint] ...) {
-        var mostTop = CGFloat.max ,
-        mostBottom = -CGFloat.max,
-        mostRight = -CGFloat.max,
-        mostLeft = CGFloat.max
+        var minY = CGFloat.max ,
+        maxY = -CGFloat.max,
+        maxX = -CGFloat.max,
+        minX = CGFloat.max
         
         for eachPointArray in arrayOfPoints {
             for eachPoint in eachPointArray {
-                if (eachPoint.y < mostTop) { mostTop = eachPoint.y }
-                if (eachPoint.x > mostRight) { mostRight = eachPoint.x }
-                if (eachPoint.y > mostBottom) { mostBottom = eachPoint.y }
-                if (eachPoint.x < mostLeft) { mostLeft = eachPoint.x }
+                if (eachPoint.y < minY) { minY = eachPoint.y }
+                if (eachPoint.x > maxX) { maxX = eachPoint.x }
+                if (eachPoint.y > maxY) { maxY = eachPoint.y }
+                if (eachPoint.x < minX) { minX = eachPoint.x }
             }
         }
         
-        origin = CGPointMake(mostLeft, mostTop)
-        size = CGSize(width: mostRight - mostLeft, height: mostBottom - mostTop)
+        origin = CGPointMake(minX, minY)
+        size = CGSize(width: maxX - minX, height: maxY - minY)
     }
     
     /// Create a CGRect value which covers all the given rects

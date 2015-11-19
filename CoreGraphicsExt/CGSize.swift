@@ -44,6 +44,10 @@ extension CGSize {
     public mutating func swapDimensionInPlace() {
         self = CGSize(width: height, height: width)
     }
+    
+    public func contains(size: CGSize) -> Bool {
+        return width >= size.width && height >= size.height
+    }
 }
 
 extension CGSize {
