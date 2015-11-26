@@ -8,6 +8,6 @@
 
 import UIKit
 
-func screenScale() -> CGFloat? {
+func CGScreenScale() -> CGFloat? {
     return UIScreen.mainScreen().scale
 }

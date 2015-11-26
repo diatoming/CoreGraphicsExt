@@ -8,6 +8,6 @@
 
 import AppKit
 
-func screenScale() -> CGFloat? {
+func CGScreenScale() -> CGFloat? {
     return NSScreen.mainScreen()?.backingScaleFactor
 }

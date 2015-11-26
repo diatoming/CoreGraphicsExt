@@ -1,5 +1,5 @@
 //
-//  ScreenPixelAlignment.swift
+//  CGGeometry+AlignToScreenPixels.swift
 //  Core-Graphics-Extended-Library
 //
 //  Created by Manfred on 7/6/15.
@@ -13,11 +13,11 @@ public enum ScreenPixelAlignmentPolicy: Int {
 }
 
 extension CGFloat {
-    public func alignToScreenPixel(
+    public func alignToScreenPixels(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGFloat
     {
-        if let screenScale = screenScale() {
+        if let screenScale = CGScreenScale() {
             switch alignmentPolicy {
             case .Ceil:
                 return ceil(self * screenScale) / screenScale
@@ -30,11 +30,11 @@ extension CGFloat {
 }
 
 extension CGPoint {
-    public func alignToScreenPixel(
+    public func alignToScreenPixels(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGPoint
     {
-        if let screenScale = screenScale() {
+        if let screenScale = CGScreenScale() {
             switch alignmentPolicy {
             case .Ceil:
                 return CGPoint(x: ceil(x * screenScale) / screenScale,
@@ -50,11 +50,11 @@ extension CGPoint {
 }
 
 extension CGSize {
-    public func alignToScreenPixel(
+    public func alignToScreenPixels(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGSize
     {
-        if let screenScale = screenScale() {
+        if let screenScale = CGScreenScale() {
             switch alignmentPolicy {
             case .Ceil:
                 return CGSize(width: ceil(width * screenScale) / screenScale,
@@ -71,11 +71,11 @@ extension CGSize {
 }
 
 extension CGRect {
-    func alignToScreenPixel(
+    func alignToScreenPixels(
         alignmentPolicy: ScreenPixelAlignmentPolicy = .Ceil)
         -> CGRect
     {
-        if let screenScale = screenScale() {
+        if let screenScale = CGScreenScale() {
             switch alignmentPolicy {
             case .Ceil:
                 return CGRect(x: ceil(origin.x * screenScale) / screenScale,

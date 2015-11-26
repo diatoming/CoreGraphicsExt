@@ -355,3 +355,32 @@ public enum CGRectVerticalAnchor: Int, CGRectAnchorType {
 public enum CGRectHorizontalAnchor: Int, CGRectAnchorType {
     case Left, Mid, Right
 }
+
+public func + (lhs: CGRect, rhs: CGRect) -> CGRect {
+    return CGRect(x: lhs.origin.x + rhs.origin.x,
+        y: lhs.origin.y + rhs.origin.y,
+        width: lhs.width + rhs.width,
+        height: lhs.height + rhs.height)
+}
+
+public func += (inout lhs: CGRect, rhs: CGRect) {
+    lhs = CGRect(x: lhs.origin.x + rhs.origin.x,
+        y: lhs.origin.y + rhs.origin.y,
+        width: lhs.width + rhs.width,
+        height: lhs.height + rhs.height)
+}
+
+public func - (lhs: CGRect, rhs: CGRect) -> CGRect {
+    return CGRect(x: lhs.origin.x - rhs.origin.x,
+        y: lhs.origin.y - rhs.origin.y,
+        width: lhs.width - rhs.width,
+        height: lhs.height - rhs.height)
+}
+
+public func -= (inout lhs: CGRect, rhs: CGRect) {
+    lhs = CGRect(x: lhs.origin.x - rhs.origin.x,
+        y: lhs.origin.y - rhs.origin.y,
+        width: lhs.width - rhs.width,
+        height: lhs.height - rhs.height)
+}
+

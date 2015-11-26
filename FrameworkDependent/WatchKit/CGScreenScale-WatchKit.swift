@@ -8,6 +8,6 @@
 
 import WatchKit
 
-func screenScale() -> CGFloat? {
+func CGScreenScale() -> CGFloat? {
     return WKInterfaceDevice.currentDevice().screenScale
 }
