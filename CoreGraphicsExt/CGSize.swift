@@ -8,6 +8,18 @@
 
 import CoreGraphics
 
+extension CGSize: CustomStringConvertible {
+    public var description: String {
+        return "<\(self.dynamicType): Width = \(self.width), Height = \(self.height)>"
+    }
+}
+
+extension CGSize: Hashable {
+    public var hashValue: Int {
+        return "<\(self.dynamicType): Width = \(self.width), Height = \(self.height)>".hashValue
+    }
+}
+
 extension CGSize {
     /// Create a CGSize value with maximum width and height
     public static var max: CGSize {

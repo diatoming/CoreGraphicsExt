@@ -8,6 +8,18 @@
 
 import CoreGraphics
 
+extension CGRect: CustomStringConvertible {
+    public var description: String {
+        return "<\(self.dynamicType): X = \(self.origin.x), Y = \(self.origin.y), Width = \(self.width), Height = \(self.height)>"
+    }
+}
+
+extension CGRect: Hashable {
+    public var hashValue: Int {
+        return "<\(self.dynamicType): X = \(self.origin.x), Y = \(self.origin.y), Width = \(self.width), Height = \(self.height)>".hashValue
+    }
+}
+
 /// Vertices on CGRect
 public enum CGRectVertex: Int,
     CustomDebugStringConvertible,

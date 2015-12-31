@@ -8,6 +8,18 @@
 
 import CoreGraphics
 
+extension CGPoint: CustomStringConvertible {
+    public var description: String {
+        return "<\(self.dynamicType): X = \(self.x), Y = \(self.y)>"
+    }
+}
+
+extension CGPoint: Hashable {
+    public var hashValue: Int {
+        return "<\(self.dynamicType): X = \(self.x), Y = \(self.y)>".hashValue
+    }
+}
+
 extension CGPoint {
     /// Return an offset point with given offset
     public func offset(offset: CGPoint) -> CGPoint {
