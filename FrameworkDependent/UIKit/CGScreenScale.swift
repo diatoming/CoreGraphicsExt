@@ -9,5 +9,5 @@
 import UIKit
 
 func CGScreenScale() -> CGFloat? {
-    return UIScreen.mainScreen().nativeScale
+    return UIScreen.mainScreen().scale
 }
