@@ -8,17 +8,22 @@
 
 import CoreGraphics
 
-public enum ScreenPixelAlignmentPolicy: Int {
+public enum CGUnaryGeometryScreenPixelAlignment: Int {
     case Ceil, Floor, Round
+}
+
+public enum CGBinaryGeometryScreenPixelAlignment: Int {
+    case Extend, Round, Shrink
 }
 
 extension CGFloat {
     public func alignToScreenPixels(
-        alignmentPolicy: ScreenPixelAlignmentPolicy = .Round)
+        alignment: CGUnaryGeometryScreenPixelAlignment = .Round
+        )
         -> CGFloat
     {
         if let screenScale = CGScreenScale() {
-            switch alignmentPolicy {
+            switch alignment {
             case .Ceil:
                 return ceil(self * screenScale) / screenScale
             case .Floor:
@@ -33,20 +38,27 @@ extension CGFloat {
 
 extension CGPoint {
     public func alignToScreenPixels(
-        alignmentPolicy: ScreenPixelAlignmentPolicy = .Round)
+        alignment: CGUnaryGeometryScreenPixelAlignment = .Round
+        )
         -> CGPoint
     {
         if let screenScale = CGScreenScale() {
-            switch alignmentPolicy {
+            switch alignment {
             case .Ceil:
-                return CGPoint(x: ceil(x * screenScale) / screenScale,
-                    y: ceil(y * screenScale) / screenScale)
+                return CGPoint(
+                    x: ceil(x * screenScale) / screenScale,
+                    y: ceil(y * screenScale) / screenScale
+                )
             case .Floor:
-                return CGPoint(x: floor(x * screenScale) / screenScale,
-                    y: floor(y * screenScale) / screenScale)
+                return CGPoint(
+                    x: floor(x * screenScale) / screenScale,
+                    y: floor(y * screenScale) / screenScale
+                )
             case .Round:
-                return CGPoint(x: round(x * screenScale) / screenScale,
-                    y: round(y * screenScale) / screenScale)
+                return CGPoint(
+                    x: round(x * screenScale) / screenScale,
+                    y: round(y * screenScale) / screenScale
+                )
             }
         } else {
             return CGPoint(x: Int(x), y: Int(y))
@@ -56,54 +68,108 @@ extension CGPoint {
 
 extension CGSize {
     public func alignToScreenPixels(
-        alignmentPolicy: ScreenPixelAlignmentPolicy = .Round)
+        alignment: CGUnaryGeometryScreenPixelAlignment = .Round
+        )
         -> CGSize
     {
         if let screenScale = CGScreenScale() {
-            switch alignmentPolicy {
+            switch alignment {
             case .Ceil:
-                return CGSize(width: ceil(width * screenScale) / screenScale,
-                    height: ceil(height * screenScale) / screenScale)
+                return CGSize(
+                    width: ceil(width * screenScale) / screenScale,
+                    height: ceil(height * screenScale) / screenScale
+                )
             case .Floor:
-                return CGSize(width: floor(width * screenScale) / screenScale,
-                    height: floor(height * screenScale) / screenScale)
+                return CGSize(
+                    width: floor(width * screenScale) / screenScale,
+                    height: floor(height * screenScale) / screenScale
+                )
             case .Round:
-                return CGSize(width: round(width * screenScale) / screenScale,
-                    height: round(height * screenScale) / screenScale)
+                return CGSize(
+                    width: round(width * screenScale) / screenScale,
+                    height: round(height * screenScale) / screenScale
+                )
             }
         } else {
-            return CGSize(width: Int(width),
-                height: Int(height))
+            return CGSize(width: Int(width), height: Int(height))
         }
     }
 }
 
 extension CGRect {
+    #if os(iOS) || os(tvOS) || os(watchOS)
     public func alignToScreenPixels(
-        alignmentPolicy: ScreenPixelAlignmentPolicy = .Round)
+        alignment: CGBinaryGeometryScreenPixelAlignment = .Extend
+        )
         -> CGRect
     {
         if let screenScale = CGScreenScale() {
-            switch alignmentPolicy {
-            case .Ceil:
-                return CGRect(x: ceil(origin.x * screenScale) / screenScale,
-                    y: ceil(origin.y * screenScale) / screenScale,
-                    width: ceil(size.width * screenScale) / screenScale,
-                    height: ceil(size.height * screenScale) / screenScale)
-            case .Floor:
-                return CGRect(x: floor(origin.x * screenScale) / screenScale,
+            switch alignment {
+            case .Extend:
+                return CGRect(
+                    x: floor(origin.x * screenScale) / screenScale,
                     y: floor(origin.y * screenScale) / screenScale,
-                    width: floor(size.width * screenScale) / screenScale,
-                    height: floor(size.height * screenScale) / screenScale)
+                    width: ceil(size.width * screenScale) / screenScale,
+                    height: ceil(size.height * screenScale) / screenScale
+                )
             case .Round:
-                return CGRect(x: round(origin.x * screenScale) / screenScale,
+                return CGRect(
+                    x: round(origin.x * screenScale) / screenScale,
                     y: round(origin.y * screenScale) / screenScale,
                     width: round(size.width * screenScale) / screenScale,
-                    height: round(size.height * screenScale) / screenScale)
+                    height: round(size.height * screenScale) / screenScale
+                )
+            case .Shrink:
+                return CGRect(
+                    x: ceil(origin.x * screenScale) / screenScale,
+                    y: ceil(origin.y * screenScale) / screenScale,
+                    width: floor(size.width * screenScale) / screenScale,
+                    height: floor(size.height * screenScale) / screenScale
+                )
             }
         } else {
-            return CGRect(x: Int(origin.x), y: Int(origin.y),
-                width: Int(width), height: Int(height))
+            return CGRect(
+                x: Int(origin.x), y: Int(origin.y),
+                width: Int(width), height: Int(height)
+            )
         }
     }
+    #elseif os(OSX)
+    public func alignToScreenPixels(
+        alignment: CGBinaryGeometryScreenPixelAlignment = .Extend
+        )
+        -> CGRect
+    {
+        if let screenScale = CGScreenScale() {
+            switch alignment {
+            case .Extend:
+                return CGRect(
+                    x: ceil(origin.x * screenScale) / screenScale,
+                    y: ceil(origin.y * screenScale) / screenScale,
+                    width: floor(size.width * screenScale) / screenScale,
+                    height: floor(size.height * screenScale) / screenScale
+                )
+            case .Round:
+                return CGRect(
+                    x: round(origin.x * screenScale) / screenScale,
+                    y: round(origin.y * screenScale) / screenScale,
+                    width: round(size.width * screenScale) / screenScale,
+                    height: round(size.height * screenScale) / screenScale
+                )
+            case .Shrink:
+                return CGRect(
+                    x: floor(origin.x * screenScale) / screenScale,
+                    y: floor(origin.y * screenScale) / screenScale,
+                    width: ceil(size.width * screenScale) / screenScale,
+                    height: ceil(size.height * screenScale) / screenScale
+                )
+            }
+        } else {
+            return CGRect(
+                x: Int(origin.x), y: Int(origin.y),
+                width: Int(width), height: Int(height)
+            )
+        }
+    }
+    #endif
 }
